@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Recuerdos</title>
+</head>
+<body>
+    <div class="scene">
+        <div class="moon"></div>
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>José Manuel Díaz Pérez</h2>
+                <img src="img/jose1.jpeg" alt="jose">
+                <a href="#">28-05-1994 / 18-04-2019</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Para los que ame y los que me amaron:</h2>
+                <p>Que su tristeza se convierta, en confianza y fé. Es solo por un momento que vamos a estar separados asi que bendigan los recuerdos de su corazón.
+                </p>
+            </div>
+        </div>
+
+        <span class="copyrigth">
+            Kevin Lovos &copy; Todos los derechos reservados.
+        </span>
+
+        <img src="img/forest.png" alt="forest" class="forest">
+        <img src="img/cloud1.png" alt="forest" class="cloud1">
+        <img src="img/cloud2.png" alt="forest" class="cloud2">
+        <img src="img/cloud3.png" alt="forest" class="cloud3">
+        <img src="img/cloud1.png" alt="forest" class="cloud4">
+        <img src="img/cloud2.png" alt="forest" class="cloud5">
+        <img src="img/cloud3.png" alt="forest" class="cloud6">
+    </div>
+    <script type="text/javascript">
+        function stars() {
+            let count = 500;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while(i < count) {
+                let star = document.createElement("i");
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.floor(Math.random() * window.innerHeight);
+                let duration = Math.random() * 10;
+                let size = Math.random() * 2;
+
+                star.style.left = x + 'px';
+                star.style.top = y + 'px';
+                star.style.height = 1 + size + 'px';
+                star.style.width = 1 + size + 'px';
+
+                star.style.animationDuration = 5 + duration + 's';
+                star.style.animationDelay = duration + 's';
+
+                scene.appendChild(star);
+                i++;
+
+            }
+        }
+
+        stars();
+    </script>
+</body>
+</html>
